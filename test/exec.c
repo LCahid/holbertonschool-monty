@@ -24,7 +24,7 @@ int exec_opcode(unsigned int line_number, stack_t **stack)
 		j = 0;
 		i++;
 	}
-	dprintf(2, "L%u: unknown instruction %s\n", line_number, opcode[0]);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode[0]);
 	free(buf);
 	free_opcode();
 	free_stack(*stack);

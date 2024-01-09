@@ -44,10 +44,10 @@ char **get_command()
 		return (NULL);
 	}
 	arr = malloc(sizeof(char *) * (count + 1));
-	arr[i++] = strtok(buf, " \n\t");
+	arr[i++] = strtok(buf, " \n\t\r");
 	while (i < count)
 	{
-		arr[i++] = strtok(NULL, " \n\t");
+		arr[i++] = strtok(NULL, " \n\t\r");
 	}
 	arr[i] = NULL;
 	return (arr);
