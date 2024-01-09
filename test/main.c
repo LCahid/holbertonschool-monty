@@ -8,19 +8,20 @@
   */
 int main(int argc, char **argv)
 {
-	int i = 1;
+	int i = 0;
 	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
-		dprintf(2, "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		return (EXIT_FAILURE);
 	}
 	f = fopen(argv[1], "r");
 	if (f == NULL)
-		dprintf(2, "Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
 	while (1)
 	{
+		i++;
 		opcode = get_command();
 		if (strcmp(buf, " ") == 0)
 		{
@@ -36,7 +37,6 @@ int main(int argc, char **argv)
 		exec_opcode(i, &stack);
 		free(buf);
 		free_opcode();
-		i++;
 	}
 	return (0);
 }
