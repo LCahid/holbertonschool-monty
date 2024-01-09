@@ -40,6 +40,7 @@ void pall(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
 void free_opcode();
 void print_stack(stack_t *stack);
+int isnum(char *str);
 FILE *f;
 char *buf, **opcode;
 #endif
