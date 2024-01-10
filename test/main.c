@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 			free(buf), free_stack(stack);
 			break;
 		}
-		if (opcode == NULL)
+		if (opcode == NULL || strcmp(opcode[0], "nop") == 0)
 		{
 			free(buf);
 			free_opcode();
