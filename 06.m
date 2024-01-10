@@ -3,4 +3,7 @@ push 2
 push 3
 pall
 swap
+nop
+pall
+add
 pall
