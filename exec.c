@@ -8,7 +8,8 @@
 int exec_opcode(unsigned int line_number, stack_t **stack)
 {
 	int i = 0, j = 0;
-	instruction_t t[] = {{"push", push}, {"pall", pall}, {"pint", pint_stack}, {NULL}};
+	instruction_t t[] = {{"push", push}, {"pall", pall},
+		{"pint", pint_stack}, {"pop", pop}, {NULL}};
 
 	while (opcode[i] != NULL)
 	{
